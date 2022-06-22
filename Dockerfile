@@ -9,6 +9,6 @@ RUN apt install -y curl
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 RUN apt install -y nodejs
 RUN sudo npm install --location=global npm
-RUN sudo npm install --location=global truffle Ganache
+RUN sudo npm install --location=global truffle ganache
 USER dev
 CMD [ "/bin/bash" ]
