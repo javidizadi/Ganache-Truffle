@@ -11,3 +11,4 @@ RUN apt install -y nodejs
 RUN sudo npm install --location=global npm
 RUN sudo npm install --location=global truffle Ganache
 USER dev
+CMD [ "/bin/bash" ]
