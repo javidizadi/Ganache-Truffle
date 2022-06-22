@@ -9,8 +9,8 @@ RUN echo "dev ALL=(ALL) ALL" >> /etc/sudoers
 RUN apt install -y curl
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 RUN apt install -y nodejs
-USER dev
 RUN sudo npm install --location=global yarn
+USER dev
 RUN echo "export PATH=$PATH:$(yarn global bin)" >> $HOME/.bashrc
 RUN yarn global add truffle ganache
 CMD [ "/bin/bash" ]
